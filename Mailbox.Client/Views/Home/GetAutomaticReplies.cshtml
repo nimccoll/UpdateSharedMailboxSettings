@@ -1,0 +1,101 @@
+﻿<!--
+//===============================================================================
+// Microsoft FastTrack for Azure
+// Update Shared Mailbox Automatic Replies Sample
+//===============================================================================
+// Copyright © Microsoft Corporation.  All rights reserved.
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+// OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+// LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+// FITNESS FOR A PARTICULAR PURPOSE.
+//===============================================================================
+-->
+@model Mailbox.Models.MailboxSettings
+
+@{
+    ViewData["Title"] = "Update Automatic Replies";
+}
+
+<h4>Update Automatic Replies</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="UpdateAutomaticReplies">
+            <input type="hidden" asp-for="OdataContext" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @if (!string.IsNullOrEmpty(ViewBag.Message))
+            {
+                <div class="alert @ViewBag.Class" role="alert">
+                    @ViewBag.Message
+                </div>
+            }
+            <div class="form-group">
+                <label class="control-label">Status</label>
+                <select asp-for="automaticRepliesSetting.status" class="form-control">
+                    <option value="disabled">Disabled</option>
+                    <option value="alwaysEnabled">Always Enabled</option>
+                    <option value="scheduled">Scheduled</option>
+                </select>
+                <span asp-validation-for="automaticRepliesSetting.status" class="text-danger"></span>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label class="control-label">Scheduled Start Date / Time</label>
+                            <input asp-for="automaticRepliesSetting.scheduledStartDateTime.dateTime" class="form-control" />
+                            <span asp-validation-for="automaticRepliesSetting.scheduledStartDateTime.dateTime" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="control-label">Time Zone</label>
+                            <input asp-for="automaticRepliesSetting.scheduledStartDateTime.timeZone" class="form-control" /><a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/default-time-zones?view=windows-11" target="_blank">Timezone Reference List</a>
+                            <span asp-validation-for="automaticRepliesSetting.scheduledStartDateTime.timeZone" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label class="control-label">Scheduled End Date / Time</label>
+                            <input asp-for="automaticRepliesSetting.scheduledEndDateTime.dateTime" class="form-control" />
+                            <span asp-validation-for="automaticRepliesSetting.scheduledEndDateTime.dateTime" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="control-label">Time Zone</label>
+                            <input asp-for="automaticRepliesSetting.scheduledEndDateTime.timeZone" class="form-control" /><a href="https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/default-time-zones?view=windows-11" target="_blank">Timezone Reference List</a>
+                            <span asp-validation-for="automaticRepliesSetting.scheduledEndDateTime.timeZone" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+            <div class="form-group" style="margin-top:20px">
+                <label class="control-label">Reply Inside Your Organization</label>
+                <input asp-for="automaticRepliesSetting.internalReplyMessage" class="form-control" />
+                <span asp-validation-for="automaticRepliesSetting.internalReplyMessage" class="text-danger"></span>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label class="control-label">External Audience</label>
+                        <span asp-validation-for="automaticRepliesSetting.externalAudience" class="text-danger"></span>
+                        <select asp-for="automaticRepliesSetting.externalAudience" class="form-control">
+                            <option value="none">None</option>
+                            <option value="contactsOnly">Contacts Only</option>
+                            <option value="all">All</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Reply Outside Your Organization</label>
+                        <input asp-for="automaticRepliesSetting.externalReplyMessage" class="form-control" />
+                        <span asp-validation-for="automaticRepliesSetting.externalReplyMessage" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" style="margin-top:20px">
+                <input type="submit" value="Save" class="btn btn-primary" /> <a asp-action="Index">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32413.511
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mailbox.API", "Mailbox.API\Mailbox.API.csproj", "{A018858F-1F2F-4941-B98F-F344E2846985}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mailbox.Client", "Mailbox.Client\Mailbox.Client.csproj", "{F86963ED-942D-4702-AB30-4CB753C143F3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mailbox.Models", "Mailbox.Models\Mailbox.Models.csproj", "{53275594-D15F-4CA5-9681-0863D78BC4CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A018858F-1F2F-4941-B98F-F344E2846985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A018858F-1F2F-4941-B98F-F344E2846985}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A018858F-1F2F-4941-B98F-F344E2846985}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A018858F-1F2F-4941-B98F-F344E2846985}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F86963ED-942D-4702-AB30-4CB753C143F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F86963ED-942D-4702-AB30-4CB753C143F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F86963ED-942D-4702-AB30-4CB753C143F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F86963ED-942D-4702-AB30-4CB753C143F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53275594-D15F-4CA5-9681-0863D78BC4CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53275594-D15F-4CA5-9681-0863D78BC4CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53275594-D15F-4CA5-9681-0863D78BC4CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53275594-D15F-4CA5-9681-0863D78BC4CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D224A677-95B1-4B7A-84D6-FFC55573BAF8}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://nimccoll.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Mailbox.API\\Mailbox.API.csproj
+		SccProjectName1 = Mailbox.API
+		SccLocalPath1 = Mailbox.API
+		SccProjectUniqueName2 = Mailbox.Client\\Mailbox.Client.csproj
+		SccProjectName2 = Mailbox.Client
+		SccLocalPath2 = Mailbox.Client
+		SccProjectUniqueName3 = Mailbox.Models\\Mailbox.Models.csproj
+		SccProjectName3 = Mailbox.Models
+		SccLocalPath3 = Mailbox.Models
+	EndGlobalSection
+EndGlobal

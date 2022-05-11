@@ -1,0 +1,21 @@
+﻿<!--
+//===============================================================================
+// Microsoft FastTrack for Azure
+// Update Shared Mailbox Automatic Replies Sample
+//===============================================================================
+// Copyright © Microsoft Corporation.  All rights reserved.
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+// OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+// LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+// FITNESS FOR A PARTICULAR PURPOSE.
+//===============================================================================
+-->
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">O365 Shared Mailbox Update Automatic Replies Sample</h1>
+    <p>This sample demonstrates how to update the Automatic Replies Settings on a shared mailbox in Office 365.</p>
+    @Html.ActionLink("Update Automatic Replies", "GetAutomaticReplies", "Home", new { }, new { @class = "btn btn-primary" })
+</div>
